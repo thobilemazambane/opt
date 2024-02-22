@@ -14,7 +14,7 @@ num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 currentdate=$(date '+%d-%b-%Y_Bucket_')
 ipaddress=$(curl -s api.ipify.org)
 underscored_ip=$(echo $ipaddress | sed 's/\./_/g')
-currentdate="${currentdate} $underscored_ip"
+currentdate="${currentdate}$underscored_ip"
 used_num_of_cores=`expr $num_of_cores - 2`
 echo ""
 echo "You will be using $used_num_of_cores cores"
